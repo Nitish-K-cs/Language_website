@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="images/icon.webp">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Books</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="images/mobile.png" class="mobile">
+            <div id="circle">
+                <div class="feature one">
+                    <img src="images/Clogo.png">
+                    <div>
+                        <h1>C++</h1>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="images/javalogo.png">
+                    <div>
+                        <h1>Java</h1>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="images/Htmllogo.png">
+                    <div>
+                        <h1>HTML</h1>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="images/Jslogo.webp">
+                    <div>
+                        <h1>Javascript</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <img src="images/arrow.png" id="upbtn">
+            <h3>Languages</h3>
+            <img src="images/arrow.png" id="downbtn">
+        </div>
+    </div>
+    <script>
+        var circle = document.getElementById("circle");
+        var upbtn = document.getElementById("upbtn");
+        var downbtn = document.getElementById("downbtn");
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        upbtn.onclick = function()
+        {
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+        downbtn.onclick = function()
+        {
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+</body>
+</html>
